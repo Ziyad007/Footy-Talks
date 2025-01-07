@@ -1,0 +1,22 @@
+<%- include("Partials/Header.ejs") %>
+<form action="/Edit/<%= currentPost.Id %>" method="POST">
+<div class="container mt-5">
+    <br><br>
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="Title" name="Title" value="<%= currentPost.Title %>" required>
+    </div>
+    <div class="mb-3">
+        <label for="content" class="form-label">Content</label>
+        <textarea class="form-control" id="Content" name="Content" rows="5" required><%= currentPost.Content %></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="createdBy" class="form-label">Author</label>
+        <input type="text" class="form-control" id="createdBy" name="createdBy" value="<%= currentPost.createdBy %>" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>    
+</div>
+    
+
+<%- include("Partials/Footer.ejs") %>

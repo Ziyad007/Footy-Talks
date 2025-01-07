@@ -1,0 +1,36 @@
+<%- include("Partials/Header.ejs") %>
+<div class="col-md-10 container">
+  <h3 class="pb-4 mb-4 fst-italic border-bottom">Browse through our Talks</h3>
+  <div class="container">
+    <% blogPosts.forEach(blogPost => { %>
+        <article class="blog-post">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="display-5 link-body-emphasis mb-1"><%= blogPost.Title %></h2>
+                <div class="d-flex align-items-center">
+                    <a href="/Edit/<%= blogPost.Id %>">
+                        <img src="images/edit-246.png" class="img-fluid" width="40" height="40" alt="Edit">
+                    </a>
+                    <form action="/Delete/<%= blogPost.Id %>" method="POST">
+                        <button type="submit" class="btn btn-link p-0 m-0">
+                            <img src="images/delete.png" class="img-fluid" width="30" height="30" alt="Delete">
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <p class="blog-post-meta"><%= blogPost.createdAt %> by <a href="#"><%= blogPost.createdBy %></a></p>
+            <hr>
+            <p><%= blogPost.Content %></p>
+        </article>
+        <br><br><br><br>
+    <% }); %>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<%- include("Partials/Footer.ejs") %>

@@ -1,0 +1,19 @@
+<%- include("Partials/Header.ejs") %>
+      <div class="px-4 my-2 text-center">
+        <img class="d-block mx-auto mb-4" src="images/phone-football-logo.png" alt="" width="300" height="300">
+        <h1 class="display-5 fw-bold text-body-emphasis">Welcome to Footy Talks: Where Passion Meets the Pitch</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Join the conversation, share your insights, and dive into the world of football fandom. Whether you're a die-hard supporter or a casual observer, Footy Talks is your platform to discuss football.</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <form action="/Create">
+              <button type="create" class="btn btn-primary btn-lg px-4 gap-3">Create Post</button>
+            </form>
+            <form action="/View">
+              <button type="view" class="btn btn-outline-secondary btn-lg px-4">View Posts</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+  
+<%- include("Partials/Footer.ejs") %>
