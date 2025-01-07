@@ -9,10 +9,10 @@ dotenv.config();
 
 // Initialize Express and Middleware
 const app = express();
+app.set("view engine", "ejs");
 const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-
 
 // Routes
 //Render Home Page
